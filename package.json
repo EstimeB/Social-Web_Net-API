@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "name": "social-web_net-api",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EstimeB/Social-Web_Net-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EstimeB/Social-Web_Net-API/issues"
+  },
+  "homepage": "https://github.com/EstimeB/Social-Web_Net-API#readme"
+}
