@@ -30,7 +30,6 @@ module.exports = {
         .catch((err) => res.status(500).json(err));
     },
     // Update a user
-    // create a new user
     updateUser(req, res) {
         // Using findOneAndUpdate method
         User.findOneAndUpdate(
