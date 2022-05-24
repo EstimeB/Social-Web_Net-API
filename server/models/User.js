@@ -32,12 +32,7 @@ const userSchema = new Schema(
       // },
     },
     // Referencing Thought Model
-    thoughts: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Thought",
-      },
-    ],
+    thoughts: [Thought],
     //Self-reference
     // friends: [this],
     friends: [{ type: Schema.Types.ObjectId, ref: 'User' }],
