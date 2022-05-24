@@ -15,11 +15,12 @@ router.route('/').get(getUsers).post(createUser);
 // Get a single user by id (will populated thought and friend data)
 router
     .route('/:userId')
+    // Get single user
     .get(getSingleUser)
     // Update user
     .put(updateUser)
     // Delete user
     .delete(deleteUser);
 
-
+// Export user route
 module.exports = router;
