@@ -17,9 +17,9 @@ router
     .route('/:userId')
     // Get single user
     .get(getSingleUser)
-    // Update user
+    // Update users
     .put(updateUser)
-    // Delete user
+    // Delete users
     .delete(deleteUser);
 
 // Export user route
