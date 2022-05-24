@@ -1,5 +1,5 @@
 // Require validator to validate emails
-const validator = require("validator");
+// const { validator } = require("validator");
 //
 const { Schema, model } = require("mongoose");
 // Importing Thought model
@@ -22,19 +22,25 @@ const userSchema = new Schema(
       required: true,
       unique: true,
       // To confirm that the email is accurate/true/exist
-      validate: {
-        validator: validator.isEmail,
-        // If not throw message
-        message: "{Value} is invalid",
-        //Set to false to enable mongoose
-        isAsync: false,
-      },
+      match: [/.+@.+\..+/, 'Must match an email address!'],
+      // validate: {
+      //   validator: validator.isEmail,
+      //   // If not throw message
+      //   message: "{Value} is invalid",
+      //   //Set to false to enable mongoose
+      //   isAsync: false,
+      // },
     },
     // Referencing Thought Model
-    thoughts: [Thought],
+    thoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Thought",
+      },
+    ],
     //Self-reference
-    friends: [this],
-    //[{ type: Schema.Types.ObjectId, ref: 'User' }],
+    // friends: [this],
+    friends: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   },
   {
     toJSON: {
@@ -46,14 +52,14 @@ const userSchema = new Schema(
 // Create a virtual
 userSchema
   // Name virtual
-  .virtual("friendCount")
+  .virtual('friendCount')
   //Function to retrieve the length of user's friends
   .get(function () {
     return this.friends.length;
   });
 
 // Create/Initialize User model.
-const User = model("user", userSchema);
+const User = model('user', userSchema);
 
 // Export model
 module.exports = User;
