@@ -1,5 +1,5 @@
 // Importing & require express/routes
-const router = require('express').Router();
+const router = require('express').Router(); /*Express router instance is tying functions to corresponding route */
 const thoughtRoutes = require('./thoughtRoutes');
 const userRoutes = require('./userRoutes');
 

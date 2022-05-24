@@ -1,5 +1,7 @@
 const router = require('express').Router();
 
+/*Express router instance is tying functions to corresponding route */
+
 const {
     getThoughts,
     getThought,
