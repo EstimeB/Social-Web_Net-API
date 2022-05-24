@@ -30,7 +30,7 @@ const userSchema = new Schema (
                 isAsync: false,
             },
         },
-        // Referencings Thought Model
+        // Referencing Thought Model
         thoughts: [ThoughtSchema],
         //Self-reference
         friends: [ this ],
