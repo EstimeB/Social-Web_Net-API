@@ -23,7 +23,9 @@ const thoughtSchema = new Schema(
       {
         reactionId: {
           // Mongoose's ObjectId data type
+          type: Schema.Types.ObjectId,
           // Default value is set to a new ObjectId
+          default: () => new Types.ObjectId(),
         },
         reactionBody: {
           type: String,

@@ -12,7 +12,7 @@ module.exports = {
         .catch((err) => res.status(500).json(err));
     },
     // Get a single thought
-    getSingleThought(req, res) {
+    getThought(req, res) {
         User.findOne({ _id: req.params.thoughtId })
         .then((thought) =>
             !thought

@@ -8,7 +8,8 @@ const Thought = require("./Thought");
 // Schema that to define the shape of document within the collection, will be used to create User model
 const userSchema = new Schema(
   {
-    _id: { type: Schema.ObjectId },
+    _id: String,
+    // { type: Schema.ObjectId },
     //required: true,
     username: {
       type: String,
@@ -32,10 +33,15 @@ const userSchema = new Schema(
       // },
     },
     // Referencing Thought Model
-    thoughts: [Thought],
+    thoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Thought',
+      },
+    ],
     //Self-reference
     // friends: [this],
-    friends: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+    friends: { type: String, ref: 'user' },
   },
   {
     toJSON: {
