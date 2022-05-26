@@ -3,14 +3,12 @@
 //
 const { Schema, model } = require("mongoose");
 // Importing Thought model
-const Thought = require("./Thought");
+
 
 // Schema that to define the shape of document within the collection, will be used to create User model
 const userSchema = new Schema(
   {
-    _id: String,
-    // { type: Schema.ObjectId },
-    //required: true,
+    
     username: {
       type: String,
       unique: true,
@@ -41,12 +39,13 @@ const userSchema = new Schema(
     ],
     //Self-reference
     // friends: [this],
-    friends: { type: String, ref: 'user' },
+    friends: [{ type: String, ref: 'User' }],
   },
   {
     toJSON: {
       virtuals: true,
     },
+    id:false
   }
 );
 
@@ -60,7 +59,7 @@ userSchema
   });
 
 // Create/Initialize User model.
-const User = model('user', userSchema);
+const User = model('User', userSchema);
 
 // Export model
 module.exports = User;
