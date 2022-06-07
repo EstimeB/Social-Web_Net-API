@@ -7,13 +7,13 @@ module.exports = {
 
     // Get all thoughts
     getThoughts(req, res) {
-        User.find()
+        Thought.find()
         .then((thoughts) => res.json(thoughts))
         .catch((err) => res.status(500).json(err));
     },
     // Get a single thought
     getThought(req, res) {
-        User.findOne({ _id: req.params.thoughtId })
+        Thought.findOne({ _id: req.params.thoughtId })
         .then((thought) =>
             !thought
             ? res.status(404).json({ message: 'No thought with that ID' })
