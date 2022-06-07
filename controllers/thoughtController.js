@@ -62,7 +62,7 @@ module.exports = {
     // Delete a thought and associated apps
     deleteThought(req, res) {
         // Find one thought and modify
-        Thought.findOneAndRemove({ _id: req.params.userId })
+        Thought.findOneAndRemove({ _id: req.params.thoughtId })
         .then((thought) =>
             !thought
             ? res.status(404).json({ message: 'No thought with this id!' })
@@ -76,7 +76,7 @@ module.exports = {
         .then((user) =>
             !user
             ? res.status(404).json({
-              message: 'Thought created but no user with this id!',
+              message: 'No user with this id!',
             })
             : res.json({ message: 'Successfully deleted thought!' })
         )
