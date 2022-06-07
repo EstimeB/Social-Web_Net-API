@@ -56,7 +56,7 @@ const getRandomThoughts = () => {
     results.push({
       thoughtText: userThoughts[i].thoughtText,
       username: userThoughts[i].username,
-      friends: names[randomName].username,
+      friends: names[randomFriend].username,
       reactions: {
         reactionBody:possibleReactions[randomNum],
         username: names[randomName].username,
@@ -68,21 +68,6 @@ const getRandomThoughts = () => {
 
 
 const thoughtR = getRandomThoughts()
-
-// // Create the reactions that will be added to each thought
-// const getThoughtReactions = (int) => {
-//   if (int === 1) {
-//     return getRandomArrItem(possibleReactions);
-//   }
-//   const results = [];
-//   for (let i = 0; i < int; i++) {
-//     results.push({
-//       reactionBody: getRandomArrItem(possibleReactions),
-//       username: getRandomName(names),
-//     });
-//   }
-//   return results;
-// };
 
 
 
