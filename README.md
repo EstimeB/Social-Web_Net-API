@@ -36,3 +36,10 @@
 ### Questions 
 Any questions please [email me](mailto:estimebrithnie@yahoo.com)
  or visit my [Github Profile](https://github.com/Estimeb)
+ 
+ [Walkthrough video](https://drive.google.com/file/d/1OYTHauolP-Th4x_QNGfMIOgLChFiMXC3/view?usp=sharing)
+ 
+ ![Screen Shot 0004-06-09 at 07 38 16](https://user-images.githubusercontent.com/101056987/172876163-d0643b14-2086-4b6a-a042-5214423c2910.png)
+ ![Screen Shot 0004-06-09 at 07 38 47](https://user-images.githubusercontent.com/101056987/172876264-a12b5420-b958-45bc-8241-f7f94d4b64a7.png)
+ ![Screen Shot 0004-06-09 at 07 39 23](https://user-images.githubusercontent.com/101056987/172876315-67a9afa3-4c57-47a0-9f15-149d8c09f811.png)
+ ![Screen Shot 0004-06-09 at 07 41 17](https://user-images.githubusercontent.com/101056987/172876356-8090c308-595d-4506-8662-c113314ebd45.png)
