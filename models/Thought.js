@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model, Types } = require("mongoose");
 
 // Schema that to define the shape of document within the collection, will be used to create Thought model
 const thoughtSchema = new Schema(

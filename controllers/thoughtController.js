@@ -98,7 +98,7 @@ module.exports = {
             : res.json(thought)
         )
         .catch((err) => res.status(500).json(err));
-    a},
+    },
     // Find thought id remove reaction id from/update array.
     removeReaction(req, res) {
         Thought.findOneAndUpdate(
